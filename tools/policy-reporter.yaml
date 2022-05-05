@@ -1,0 +1,12 @@
+kyvernoPlugin:
+  enabled: true
+monitoring:
+  enabled: true
+  grafana:
+    namespace: monitoring
+    dashboards:
+      enabled: true
+ui:
+  enabled: true
+  plugins:
+    kyverno: true
