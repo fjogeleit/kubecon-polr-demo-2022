@@ -1,0 +1,135 @@
+apiVersion: wgpolicyk8s.io/v1alpha2
+kind: PolicyReport
+metadata:
+  labels:
+    pod-spec-hash: 595b4c7769
+    trivy-adapter.container.name: zipkin
+    trivy-adapter.resource.kind: Pod
+    trivy-adapter.resource.name: zipkin-bcb49db4-qsr4j
+    trivy-adapter.resource.namespace: default
+  name: pod-zipkin-bcb49db4-qsr4j-zipkin
+  namespace: default
+results:
+- category: busybox
+  policy: CVE-2022-28391
+  properties:
+    FixedVersion: 1.33.1-r7
+    InstalledVersion: 1.33.1-r6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2022-28391
+  resources:
+  - apiVersion: v1
+    kind: Pod
+    name: zipkin-bcb49db4-qsr4j
+    namespace: default
+    uid: 2f23f90d-3477-4d7c-94ad-773dc4872b1a
+  result: skip
+  scored: true
+  source: Trivy
+  timestamp:
+    nanos: 32926097
+    seconds: 1651499755
+- category: libcrypto1.1
+  message: 'openssl: Infinite loop in BN_mod_sqrt() reachable when parsing certificates'
+  policy: CVE-2022-0778
+  properties:
+    FixedVersion: 1.1.1n-r0
+    InstalledVersion: 1.1.1l-r0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2022-0778
+  resources:
+  - apiVersion: v1
+    kind: Pod
+    name: zipkin-bcb49db4-qsr4j
+    namespace: default
+    uid: 2f23f90d-3477-4d7c-94ad-773dc4872b1a
+  result: error
+  scored: true
+  severity: high
+  source: Trivy
+  timestamp:
+    nanos: 32931120
+    seconds: 1651499755
+- category: libretls
+  message: 'openssl: Infinite loop in BN_mod_sqrt() reachable when parsing certificates'
+  policy: CVE-2022-0778
+  properties:
+    FixedVersion: 3.3.3p1-r3
+    InstalledVersion: 3.3.3p1-r2
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2022-0778
+  resources:
+  - apiVersion: v1
+    kind: Pod
+    name: zipkin-bcb49db4-qsr4j
+    namespace: default
+    uid: 2f23f90d-3477-4d7c-94ad-773dc4872b1a
+  result: error
+  scored: true
+  severity: high
+  source: Trivy
+  timestamp:
+    nanos: 32932001
+    seconds: 1651499755
+- category: libssl1.1
+  message: 'openssl: Infinite loop in BN_mod_sqrt() reachable when parsing certificates'
+  policy: CVE-2022-0778
+  properties:
+    FixedVersion: 1.1.1n-r0
+    InstalledVersion: 1.1.1l-r0
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2022-0778
+  resources:
+  - apiVersion: v1
+    kind: Pod
+    name: zipkin-bcb49db4-qsr4j
+    namespace: default
+    uid: 2f23f90d-3477-4d7c-94ad-773dc4872b1a
+  result: error
+  scored: true
+  severity: high
+  source: Trivy
+  timestamp:
+    nanos: 32932797
+    seconds: 1651499755
+- category: ssl_client
+  policy: CVE-2022-28391
+  properties:
+    FixedVersion: 1.33.1-r7
+    InstalledVersion: 1.33.1-r6
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2022-28391
+  resources:
+  - apiVersion: v1
+    kind: Pod
+    name: zipkin-bcb49db4-qsr4j
+    namespace: default
+    uid: 2f23f90d-3477-4d7c-94ad-773dc4872b1a
+  result: skip
+  scored: true
+  source: Trivy
+  timestamp:
+    nanos: 32933396
+    seconds: 1651499755
+- category: zlib
+  message: 'zlib: A flaw found in zlib when compressing (not decompressing) certain
+    inputs'
+  policy: CVE-2018-25032
+  properties:
+    FixedVersion: 1.2.12-r0
+    InstalledVersion: 1.2.11-r3
+    PrimaryURL: https://avd.aquasec.com/nvd/cve-2018-25032
+  resources:
+  - apiVersion: v1
+    kind: Pod
+    name: zipkin-bcb49db4-qsr4j
+    namespace: default
+    uid: 2f23f90d-3477-4d7c-94ad-773dc4872b1a
+  result: error
+  scored: true
+  severity: high
+  source: Trivy
+  timestamp:
+    nanos: 32934057
+    seconds: 1651499755
+summary:
+  error: 4
+  fail: 0
+  pass: 0
+  skip: 2
+  warn: 0
