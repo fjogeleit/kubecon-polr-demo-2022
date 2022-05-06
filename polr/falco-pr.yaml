@@ -1,0 +1,504 @@
+apiVersion: v1
+items:
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    name: falco-policy-report-3c3854a8
+    namespace: default
+  results:
+  - category: SI - System and Information Integrity
+    message: System ClusterRole/Role modified or deleted (user=%ka.user.name role=%ka.target.name
+      ns=%ka.target.namespace action=%ka.verb)
+    policy: System ClusterRole Modified/Deleted
+    properties:
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 428424087
+      seconds: 25
+  - category: SI - System and Information Integrity
+    message: Pod started with privileged container (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create Privileged Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 434644063
+      seconds: 37
+  - category: SI - System and Information Integrity
+    message: Attach/Exec to pod (user=%ka.user.name pod=%ka.target.name ns=%ka.target.namespace
+      action=%ka.target.subresource command=%ka.uri.param[command])
+    policy: Attach/Exec Pod
+    properties:
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns1
+      ka.target.subresource: '%ka.target.subresource'
+      ka.uri.param: '%ka.uri.param'
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 449468305
+      seconds: 54
+  - category: SI - System and Information Integrity
+    message: K8s Serviceaccount Created (user=%ka.user.name user=%ka.target.name ns=%ka.target.namespace
+      resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s Serviceaccount Created
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 453574508
+      seconds: 0
+  - category: SI - System and Information Integrity
+    message: K8s Serviceaccount Created (user=%ka.user.name user=%ka.target.name ns=%ka.target.namespace
+      resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s Serviceaccount Created
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 481506586
+      seconds: 34
+  - category: SI - System and Information Integrity
+    message: System ClusterRole/Role modified or deleted (user=%ka.user.name role=%ka.target.name
+      ns=%ka.target.namespace action=%ka.verb)
+    policy: System ClusterRole Modified/Deleted
+    properties:
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 482372186
+      seconds: 36
+  - category: SI - System and Information Integrity
+    message: K8s Serviceaccount Created (user=%ka.user.name user=%ka.target.name ns=%ka.target.namespace
+      resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s Serviceaccount Created
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 502401945
+      seconds: 2
+  - category: SI - System and Information Integrity
+    message: K8s Serviceaccount Created (user=%ka.user.name user=%ka.target.name ns=%ka.target.namespace
+      resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s Serviceaccount Created
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 502503632
+      seconds: 2
+  - category: SI - System and Information Integrity
+    message: Pod started with privileged container (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create Privileged Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns1
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 506551997
+      seconds: 9
+  summary:
+    error: 0
+    fail: 5
+    pass: 0
+    skip: 0
+    warn: 4
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2022-05-06T02:06:38Z"
+    generation: 12
+    name: falco-policy-report-5edc853f
+    namespace: default
+    resourceVersion: "1006"
+    uid: de94b56a-0a6a-46c0-9bbb-1c157942cbce
+  results:
+  - category: SI - System and Information Integrity
+    message: Ephemeral container is created in pod (user=%ka.user.name pod=%ka.target.name
+      ns=%ka.target.namespace ephemeral_container_name=%jevt.value[/requestObject/ephemeralContainers/0/name]
+      ephemeral_container_image=%jevt.value[/requestObject/ephemeralContainers/0/image])
+    policy: EphemeralContainers Created
+    properties:
+      jevt.value: '%jevt.value'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 465554149
+      seconds: 16
+  - category: SI - System and Information Integrity
+    message: NodePort Service Created (user=%ka.user.name service=%ka.target.name
+      ns=%ka.target.namespace ports=%ka.req.service.ports)
+    policy: Create NodePort Service
+    properties:
+      ka.req.service: '%ka.req.service'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 435679105
+      seconds: 38
+  - category: SI - System and Information Integrity
+    message: Ephemeral container is created in pod (user=%ka.user.name pod=%ka.target.name
+      ns=%ka.target.namespace ephemeral_container_name=%jevt.value[/requestObject/ephemeralContainers/0/name]
+      ephemeral_container_image=%jevt.value[/requestObject/ephemeralContainers/0/image])
+    policy: EphemeralContainers Created
+    properties:
+      jevt.value: '%jevt.value'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 446564489
+      seconds: 51
+  - category: SI - System and Information Integrity
+    message: NodePort Service Created (user=%ka.user.name service=%ka.target.name
+      ns=%ka.target.namespace ports=%ka.req.service.ports)
+    policy: Create NodePort Service
+    properties:
+      ka.req.service: '%ka.req.service'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 476441415
+      seconds: 27
+  - category: SI - System and Information Integrity
+    message: K8s Deployment Deleted (user=%ka.user.name deployment=%ka.target.name
+      ns=%ka.target.namespace resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s Deployment Deleted
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 501567129
+      seconds: 2
+  - category: SI - System and Information Integrity
+    message: K8s ConfigMap Created (user=%ka.user.name configmap=%ka.target.name ns=%ka.target.namespace
+      resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s ConfigMap Created
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 504309104
+      seconds: 5
+  - category: SI - System and Information Integrity
+    message: K8s ConfigMap Created (user=%ka.user.name configmap=%ka.target.name ns=%ka.target.namespace
+      resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s ConfigMap Created
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 504899861
+      seconds: 6
+  - category: SI - System and Information Integrity
+    message: Ephemeral container is created in pod (user=%ka.user.name pod=%ka.target.name
+      ns=%ka.target.namespace ephemeral_container_name=%jevt.value[/requestObject/ephemeralContainers/0/name]
+      ephemeral_container_image=%jevt.value[/requestObject/ephemeralContainers/0/image])
+    policy: EphemeralContainers Created
+    properties:
+      jevt.value: '%jevt.value'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 510804960
+      seconds: 14
+  - category: SI - System and Information Integrity
+    message: Service account created in kube namespace (user=%ka.user.name serviceaccount=%ka.target.name
+      ns=%ka.target.namespace)
+    policy: Service Account Created in Kube Namespace
+    properties:
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 515776961
+      seconds: 26
+  - category: SI - System and Information Integrity
+    message: Ephemeral container is created in pod (user=%ka.user.name pod=%ka.target.name
+      ns=%ka.target.namespace ephemeral_container_name=%jevt.value[/requestObject/ephemeralContainers/0/name]
+      ephemeral_container_image=%jevt.value[/requestObject/ephemeralContainers/0/image])
+    policy: EphemeralContainers Created
+    properties:
+      jevt.value: '%jevt.value'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns2
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 522258875
+      seconds: 32
+  summary:
+    error: 0
+    fail: 7
+    pass: 0
+    skip: 0
+    warn: 3
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2022-05-06T02:06:33Z"
+    generation: 17
+    name: falco-policy-report-a88b68b9
+    namespace: default
+    resourceVersion: "1005"
+    uid: 4b6991b8-8874-4502-8e8d-356670a8cec6
+  results:
+  - category: SI - System and Information Integrity
+    message: Pod started using host network (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create HostNetwork Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 485583808
+      seconds: 40
+  - category: SI - System and Information Integrity
+    message: Pod started with container not in allowed list (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create Disallowed Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 447248320
+      seconds: 51
+  - category: SI - System and Information Integrity
+    message: |
+      K8s Ingress Without TLS Cert Created (user=%ka.user.name ingress=%ka.target.name namespace=%ka.target.namespace)
+    policy: Ingress Object without TLS Certificate Created
+    properties:
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 497470132
+      seconds: 54
+  - category: SI - System and Information Integrity
+    message: Pod started with container not in allowed list (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create Disallowed Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 437597499
+      seconds: 41
+  - category: SI - System and Information Integrity
+    message: Pod created in kube namespace (user=%ka.user.name pod=%ka.resp.name ns=%ka.target.namespace
+      images=%ka.req.pod.containers.image)
+    policy: Pod Created in Kube Namespace
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 460758502
+      seconds: 9
+  - category: SI - System and Information Integrity
+    message: Pod started using host network (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create HostNetwork Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 462670803
+      seconds: 13
+  - category: SI - System and Information Integrity
+    message: Pod started with container not in allowed list (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create Disallowed Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 517192746
+      seconds: 26
+  - category: SI - System and Information Integrity
+    message: Pod started using host network (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create HostNetwork Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 470590409
+      seconds: 22
+  - category: SI - System and Information Integrity
+    message: Pod started using host network (user=%ka.user.name pod=%ka.resp.name
+      ns=%ka.target.namespace images=%ka.req.pod.containers.image)
+    policy: Create HostNetwork Pod
+    properties:
+      ka.req.pod: '%ka.req.pod'
+      ka.resp.name: '%ka.resp.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 484056173
+      seconds: 38
+  - category: SI - System and Information Integrity
+    message: K8s Deployment Created (user=%ka.user.name deployment=%ka.target.name
+      ns=%ka.target.namespace resp=%ka.response.code decision=%ka.auth.decision reason=%ka.auth.reason)
+    policy: K8s Deployment Created
+    properties:
+      ka.auth.decision: '%ka.auth.decision'
+      ka.auth.reason: '%ka.auth.reason'
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.namespace: ns3
+      ka.user.name: '%ka.user.name'
+    result: warn
+    severity: medium
+    source: Falco
+    timestamp:
+      nanos: 522784061
+      seconds: 32
+  summary:
+    error: 0
+    fail: 9
+    pass: 0
+    skip: 0
+    warn: 1
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

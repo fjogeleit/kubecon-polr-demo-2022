@@ -1,0 +1,165 @@
+apiVersion: v1
+items:
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: ClusterPolicyReport
+  metadata:
+    name: falco-cluster-policy-report-37736cd2
+  results:
+  - category: SI - System and Information Integrity
+    message: K8s Operation performed by user not in allowed list of users (user=%ka.user.name
+      target=%ka.target.name/%ka.target.resource verb=%ka.verb uri=%ka.uri resp=%ka.response.code)
+    policy: Disallowed K8s User
+    properties:
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.resource: '%ka.target.resource'
+      ka.uri: '%ka.uri'
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 502042815
+      seconds: 2
+  - category: SI - System and Information Integrity
+    message: Node not in allowed list successfully joined the cluster (user=%ka.user.name
+      node=%ka.target.name)
+    policy: Untrusted Node Successfully Joined the Cluster
+    properties:
+      ka.target.name: '%ka.target.name'
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 502299780
+      seconds: 2
+  - category: SI - System and Information Integrity
+    message: Created Role/ClusterRole with pod exec privileges (user=%ka.user.name
+      role=%ka.target.name rules=%ka.req.role.rules)
+    policy: ClusterRole With Pod Exec Created
+    properties:
+      ka.req.role: '%ka.req.role'
+      ka.target.name: '%ka.target.name'
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 504101754
+      seconds: 5
+  - category: SI - System and Information Integrity
+    message: K8s Audit Event received (user=%ka.user.name verb=%ka.verb uri=%ka.uri
+      obj=%jevt.obj)
+    policy: All K8s Audit Events
+    properties:
+      jevt.obj: '%jevt.obj'
+      ka.uri: '%ka.uri'
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 504446280
+      seconds: 5
+  - category: SI - System and Information Integrity
+    message: K8s Operation performed by user not in allowed list of users (user=%ka.user.name
+      target=%ka.target.name/%ka.target.resource verb=%ka.verb uri=%ka.uri resp=%ka.response.code)
+    policy: Disallowed K8s User
+    properties:
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.resource: '%ka.target.resource'
+      ka.uri: '%ka.uri'
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 509020989
+      seconds: 12
+  - category: SI - System and Information Integrity
+    message: K8s Operation performed by user not in allowed list of users (user=%ka.user.name
+      target=%ka.target.name/%ka.target.resource verb=%ka.verb uri=%ka.uri resp=%ka.response.code)
+    policy: Disallowed K8s User
+    properties:
+      ka.response.code: '%ka.response.code'
+      ka.target.name: '%ka.target.name'
+      ka.target.resource: '%ka.target.resource'
+      ka.uri: '%ka.uri'
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 511539145
+      seconds: 16
+  - category: SI - System and Information Integrity
+    message: K8s configmap with private credential (user=%ka.user.name verb=%ka.verb
+      configmap=%ka.req.configmap.name config=%ka.req.configmap.obj)
+    policy: Create/Modify Configmap With Private Credentials
+    properties:
+      ka.req.configmap: '%ka.req.configmap'
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 513250114
+      seconds: 18
+  - category: SI - System and Information Integrity
+    message: Request by anonymous user allowed (user=%ka.user.name verb=%ka.verb uri=%ka.uri
+      reason=%ka.auth.reason))
+    policy: Anonymous Request Allowed
+    properties:
+      ka.auth.reason: '%ka.auth.reason'
+      ka.uri: '%ka.uri'
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 514508128
+      seconds: 21
+  - category: SI - System and Information Integrity
+    message: Cluster Role Binding to cluster-admin role (user=%ka.user.name subject=%ka.req.binding.subjects)
+    policy: Attach to cluster-admin Role
+    properties:
+      ka.req.binding: '%ka.req.binding'
+      ka.user.name: '%ka.user.name'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 519924889
+      seconds: 30
+  - category: SI - System and Information Integrity
+    message: K8s configmap with private credential (user=%ka.user.name verb=%ka.verb
+      configmap=%ka.req.configmap.name config=%ka.req.configmap.obj)
+    policy: Create/Modify Configmap With Private Credentials
+    properties:
+      ka.req.configmap: '%ka.req.configmap'
+      ka.user.name: '%ka.user.name'
+      ka.verb: '%ka.verb'
+    result: fail
+    severity: high
+    source: Falco
+    timestamp:
+      nanos: 524356227
+      seconds: 34
+  summary:
+    error: 0
+    fail: 10
+    pass: 0
+    skip: 0
+    warn: 0
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
