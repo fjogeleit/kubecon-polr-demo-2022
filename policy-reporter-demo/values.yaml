@@ -1,0 +1,47 @@
+kyverno:
+  namespace: kyverno
+
+kyverno-policies:
+  podSecurityStandard: restricted
+
+kube-prometheus-stack:
+  namespaceOverride: monitoring
+  grafana:
+    namespaceOverride: monitoring
+  kube-state-metrics:
+    namespaceOverride: monitoring
+  prometheus-node-exporter:
+    namespaceOverride: monitoring
+
+policy-reporter:
+  image:
+    tag: dev
+    registry: docker.io
+    repository: fjogeleit/policy-reporter
+    pullPolicy: Always
+
+  kyvernoPlugin:
+    enabled: true
+    image:
+      tag: dev
+      registry: docker.io
+      repository: fjogeleit/policy-reporter-kyverno-plugin
+      pullPolicy: Always
+  monitoring:
+    enabled: true
+    grafana:
+      namespace: monitoring
+      dashboards:
+        enabled: true
+    serviceMonitor:
+      labels:
+        release: policy-reporter-demo
+  ui:
+    image:
+      tag: dev
+      registry: docker.io
+      repository: fjogeleit/policy-reporter-ui
+      pullPolicy: Always
+    enabled: true
+    plugins:
+      kyverno: true
