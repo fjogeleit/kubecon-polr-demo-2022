@@ -38,9 +38,7 @@ policy-reporter:
         release: policy-reporter-demo
   ui:
     image:
-      tag: dev
-      registry: docker.io
-      repository: fjogeleit/policy-reporter-ui
+      tag: 1.3.4
       pullPolicy: Always
     enabled: true
     plugins:
