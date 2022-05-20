@@ -18,15 +18,11 @@ policy-reporter:
     tag: dev
     registry: docker.io
     repository: fjogeleit/policy-reporter
-    pullPolicy: Always
 
   kyvernoPlugin:
     enabled: true
     image:
-      tag: dev
-      registry: docker.io
-      repository: fjogeleit/policy-reporter-kyverno-plugin
-      pullPolicy: Always
+      tag: 1.3.0
   monitoring:
     enabled: true
     grafana:
@@ -39,7 +35,6 @@ policy-reporter:
   ui:
     image:
       tag: 1.3.4
-      pullPolicy: Always
     enabled: true
     plugins:
       kyverno: true
