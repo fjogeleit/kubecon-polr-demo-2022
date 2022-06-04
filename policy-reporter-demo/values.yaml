@@ -14,15 +14,10 @@ kube-prometheus-stack:
     namespaceOverride: monitoring
 
 policy-reporter:
-  image:
-    tag: dev
-    registry: docker.io
-    repository: fjogeleit/policy-reporter
-
   kyvernoPlugin:
     enabled: true
-    image:
-      tag: 1.3.0
+    blockReports:
+      enabled: true
   monitoring:
     enabled: true
     grafana:
@@ -33,8 +28,6 @@ policy-reporter:
       labels:
         release: policy-reporter-demo
   ui:
-    image:
-      tag: 1.3.4
     enabled: true
     plugins:
       kyverno: true

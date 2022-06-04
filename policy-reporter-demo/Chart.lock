@@ -1,15 +1,12 @@
 dependencies:
-- name: namespaces
-  repository: ""
-  version: 0.1.0
 - name: kyverno
   repository: https://kyverno.github.io/kyverno
-  version: v2.3.2
+  version: v2.4.0
 - name: kube-prometheus-stack
   repository: https://prometheus-community.github.io/helm-charts
   version: 35.0.3
 - name: policy-reporter
   repository: https://kyverno.github.io/policy-reporter
-  version: 2.8.0
-digest: sha256:e01c07bea284f1201a60674468dfa86e3312aeb006f0b1f862dfb8b8395a8ee2
-generated: "2022-05-07T18:48:34.89497+02:00"
+  version: 2.9.0
+digest: sha256:859b0c32e27f58188a998e00424099ead7f8ae27a320e81c15f320c5d43126b1
+generated: "2022-06-04T17:20:16.937087+02:00"

@@ -21,7 +21,7 @@ helm upgrade --install policy-reporter-demo ./policy-reporter-demo -n policy-rep
 ### Kyverno Policies
 
 ```bash
-helm upgrade --install kyverno-policies kyverno-policies -n kyverno --create-namespace --repo https://kyverno.github.io/kyverno --version v2.3.2 --set podSecurityStandard=restricted
+helm upgrade --install kyverno-policies kyverno-policies -n kyverno --create-namespace --repo https://kyverno.github.io/kyverno --version v2.4.0 --set podSecurityStandard=restricted
 ```
 
 ## Adapter PolicyReports: Trivy, Kube-Bench, Falco
