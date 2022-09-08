@@ -14,6 +14,8 @@ kube-prometheus-stack:
     namespaceOverride: monitoring
 
 policy-reporter:
+  global:
+    namespace: policy-reporter
   kyvernoPlugin:
     enabled: true
     blockReports:
